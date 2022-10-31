@@ -2,7 +2,7 @@
 
 # Overview
 
-A non-profit foundation "Alphabet Soup" accepts and approves applications for funding to advance its mission of supporting organizations that focus on environmentalism, population health and well being, and global unification. The foundation has raised and donated over $10 billion in that past 20 years. As a data analyst, I will support the foundation's business team by creating a bindary classifier capable of predicting whether funding applicants will be successful in effectively using the funds provided by Alphabet Soup. The end goal of this task will be to streamline the application approval process, while maximizing accuracy in picking successful applicants.
+A non-profit foundation "Alphabet Soup" accepts and approves applications for funding to advance its mission of supporting organizations that focus on environmentalism, population health and well being, and global unification. The foundation has raised and donated over $10 billion in that past 20 years. As a data analyst, I will support the foundation's business team by creating a binary classifier capable of predicting whether funding applicants will be successful in effectively using the funds provided by Alphabet Soup. The end goal of this task will be to streamline the application approval process, while maximizing accuracy in picking successful applicants.
 
 From the business team, I have received a CSV containing more than 34,000 applications that have resulted in many organizations receiving funding from Alphabet Soup over the years. I will preprocess the data and then design, compile, train, and evaluate a deep learning neural network model to predict where the foundation should make investments.
 
