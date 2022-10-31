@@ -46,6 +46,7 @@ __Applications DataFrame__
     <img src="Images/special_considerations.png" alt="status" height="100"/>
     <img src="Images/status.png" alt="status" height="100"/>
     <br>
+    
         - *Note*: the "STATUS" column was already removed prior to optimization, since the method to remove non-categorical variables as all variables not matching the "object" data type and the "STATUS" data type being an integer. However, during optimization I decided to investigate further as it seems binarized as a categroical column (presumably with "1" representing "active" status and "0" representing "inactive" status - or visa versa).
     - The data was scaled using the StandardScaler before the training and test split.
 
