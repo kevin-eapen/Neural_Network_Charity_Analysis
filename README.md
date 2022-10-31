@@ -63,7 +63,7 @@ __Applications DataFrame__
             - (matching the number of desired classification outputs for each prediction)
     - I chose the activation functions for the two hidden layers and the output layer as follows:
         - I chose the "ReLU" activation function for the first and second hidden layers.
-            - This function helps with processing the complex non-linear relationships in the data, as well as simply the output for our binary classifier.
+            - This function helps with processing the complex non-linear relationships in the data, as well as simplifying the output for our binary classifier.
         - I chose the "Sigmoid" activation function for the output layer.
             - This "S-curve" function will help determine the probability values for our ultimate binary classification output, which we also refer to as our predictions for successful donations.
     - The summary and performance of the intial model is displayed below: 
@@ -71,27 +71,27 @@ __Applications DataFrame__
     <img src="Images/nn_summary.png" alt="nn_summary" height="400"/>
     <img src="Images/nn_performance.png" alt="nn_performance" height="100"/>
 - __Achieving the Target Model Performance__
-    - I was able to achieve the target model performance of higher than 75% accuracy. The optimized model was able to reach a model accuracy metric score of 80%. This was a significant improvement over the intial model's 73.1% accuracy. In addition to achieving this target metric, the optimized model shows a lower validation loss metric (47.6%) than the initial model (55.7%) as well.
+    - I was able to achieve the target model performance of higher than 75% accuracy. The optimized model was able to reach a model accuracy metric score of 80%. This was a significant improvement over the initial model's 73.1% accuracy. In addition to achieving this target metric, the optimized model shows a lower validation loss metric (47.6%) than the initial model (55.7%) as well.
     - The summary and performance of the optimized model is displayed below: 
     <br>
     <img src="Images/nn4_summary.png" alt="nn_summary" height="500"/>
     <img src="Images/nn4_performance.png" alt="nn_performance" height="100"/>
 - __Optimization Trials: Steps Taken to Increase Model Performance__
     - I first looked to revist preprocessing the data. I elminated all irrelevant data and added more binning to variables as well. Initially, the metrics did not improve. However, after reintroducing and binning the "NAME" variable to the training data, the performance of the model greatly improved. I deduce that the historical performance (or lacktherof) of each organization, in successfully using the donation funding, contained a pattern or measurable relationship to our target variable.
-    - After performing new preprocessing on the data I performed 7 different trials of models to find a model design with optima model performance. Do to introduction of the encoded name column the training set feature columns grew to 827 variables. I experimented with neural network designs with more neurons. However, even with the increased width of the training data, increasing the neurons led to a large discrepancy in training and validation loss metrics, suggesting overfitting.
+    - After performing new preprocessing on the data I performed 7 different trials of models to find a model design with optimal model performance. Due to introduction of the encoded "NAME" column, the training set feature columns grew to 827 variables. I experimented with neural network designs with more neurons. However, even with the increased width of the training data, increasing the neurons led to a large discrepancy in training and validation loss metrics, suggesting overfitting.
     - The two best performing models in the optimization trials contained fewer neurons in the hidden layers than the input layer. The fourth optimization model (best performance) used 3 hidden layers with 102 neurons in the first, 18, in the second, and 16 in the third. These numbers were reached through a process of trial and error. The sixth optimization model (second best performance) used the same design as the initial model, however, due to changes in the training set the input neurons increased to 827, ceteris paribus.  
     - The summary and performance of the second best optimized model, during the optimization trial process, is displayed below: 
     <br>
     <img src="Images/nn6_summary.png" alt="nn_summary" height="430"/>
-    <img src="Images/nn6_performance.png" alt="nn_performance" height="100"/>
-    - Ultimatley, I chose to save and export the best optimization model as the fourth model over the sixth model. The justification for this is that the model accuracies are nearly identical (the sixth approximately 0.01% greater), meanwhile, the validation loss was marginally better in the fourth model (the fourth model approximately 0.7% less validation loss).
+    <img src="Images/nn6_performance.png" alt="nn_performance" height="100"/><br>
+    - Ultimatley, I chose to save and export the best optimization model as the fourth model over the sixth model. The justification for this is that the model accuracies are nearly identical (the sixth model approximately 0.01% greater), meanwhile, the validation loss was marginally better in the fourth model (the fourth model approximately 0.7% less validation loss).
     - The intial model and the best performing model (fourth optimization model) have both been saved and exported as .h5 files and are located in this repository.
 
 # Summary
 
 __Key Takeaways:__
-- Preprocessed the data with combined techniques of feature selection and binning of values based on unique value count and value count ditribution. The data was scaled before predictive modeling.
-- Compiled, trained, and evaluated the intial model.
+- Preprocessed the data with combined techniques of feature selection and binning of values based on unique value count and value count frequency distribution. The data was scaled before predictive modeling.
+- Compiled, trained, and evaluated the initial model.
 - Went through optimization trial process to try multiple model configurations, and iteratively experimented with different data preprocessing steps along with different model designs.
 - Met the target of higher than 75% model accuracy, exceeding the target with 80% accuracy performance while reducing validation loss.
     - Reintroducing name column to the dataset for training purposes had the largest positive impact on model performance.
@@ -101,3 +101,4 @@ __Alternative Model Recommendation__
 - An alternative model for our use case would be a Support Vector Machines model (SVMs)
 - SVMs excel at binary classification for nonlinear data by calculating geometric hyperplanes to maximize distance between the closest data points between two categories.
 - Like neural networks, in binary classification, SVMs will converge on a local minimum to analyze underlying trends in the data. This is useful for constructing effective prediction models, which aligns with our use case.
+- SVMs can also be more time and computationally resource efficient, desirably impacting the cost curve of training a model that meets our set target.
