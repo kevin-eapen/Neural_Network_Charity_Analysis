@@ -44,7 +44,7 @@ __Applications DataFrame__
     - Another non-categorical variable column, "ASK_AMT", was dropped as it contained ungrouped integer data.
     - Two variables, "SPECIAL_CONSIDERATIONS" and "STATUS", presented extreme imbalance that suggested they were of little use for the model to recognize patterns related to the target output. These variables were removed during model optimization in attempt to maximize model performance. To demonstrate the level of imbalance, the value counts are displayed below.
     <br>
-    <img src="Images/special_considerations.png" alt="status" height="100"/><br>
+    <img src="Images/special_considerations.png" alt="special_considerations" height="100"/><br>
     <img src="Images/status.png" alt="status" height="100"/><br>
         - *Note*: the "STATUS" column was already removed prior to optimization, since the method to remove non-categorical variables as all variables not matching the "object" data type and the "STATUS" data type being an integer. However, during optimization I decided to investigate further as it seems binarized as a categroical column (presumably with "1" representing "active" status and "0" representing "inactive" status - or visa versa).
     - The data was scaled using the StandardScaler before the training and test split.
